@@ -65,10 +65,11 @@ def select_month(choice = 1):
     print an error if a letter is input 
     """
     error = "You must enter a number between 1 and 12"
-    
+    print("Which month would you like?")
+    print("All months are numbered 1 to 12, so January is 1, February is 2 etc.")
     while True:
-        print("Which month would you like?")
-        print("All months are numbered 1 to 12, so January is 1, February is 2 etc.")
+        
+        
         try:
             b_month = int(input("Enter a number to make your selection here:"))
             #b_month = int(b_month)
@@ -135,16 +136,17 @@ def chosen_month_data(values):
 
     print(values) 
 
-def get_birthday_list():
+
+
+
+
+
+
         
-
-
-
-
-def add_birthday():
-    print("add")         
    
        
-
-first_user_choice() 
-#select_month()  
+def main():
+    first_user_choice() 
+    #select_month() 
+     
+main()     

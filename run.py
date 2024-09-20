@@ -92,8 +92,7 @@ def chosen_month_data(values):
     
     if int(values) == 1:
         print("January Birthdays are\n")
-        print()
-        return True, "Jan"
+        return True, get_birthday_data()
     elif int(values) == 2:
         print("February") 
         return True, "Feb"
@@ -137,14 +136,19 @@ def chosen_month_data(values):
     print(values) 
 
 
-#def get_birthday_data():
+def get_birthday_data():
+    print("checking for birthdays")
+    birthday = SHEET.worksheet('Jan')
+    birthday_detail = birthday.get_all_values()
+    print(birthday_detail)
 
 
 def main():
     """
     run all program functions
     """
-    first_user_choice() 
+    #first_user_choice() 
+    get_birthday_data()
     #select_month() 
 
 

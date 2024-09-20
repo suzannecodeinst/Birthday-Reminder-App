@@ -5,3 +5,5 @@ The Birthday reminder app is a simple app that allows the user to access a birth
 ## Credits/Reference
 
 I set up the workarea and connected the Google sheets by following the API demo from the Love Sandwiches walkthrough project. I also consistently checked in with this project as a reminder of how to keep testing along the way and organise the python code, in particular by setting up a main() call at the end.
+
+Referred to [this article] (https://www.knowledgehut.com/blog/programming/user-input-in-python) on user input.

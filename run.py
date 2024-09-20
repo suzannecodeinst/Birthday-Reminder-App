@@ -38,6 +38,8 @@ def first_user_choice():
             #print("works")
             break
 
+        
+
 def validate_data(values):
     """
     Checks user choice input is either 1 or 2.
@@ -60,27 +62,36 @@ def select_month(choice = 1):
     """
     Asks the user to choose a month
     asks for an input of a number from 1 to 12
+    print an error if a letter is input 
     """
+    error = "You must enter a number between 1 and 12"
+    
     while True:
         print("Which month would you like?")
         print("All months are numbered 1 to 12, so January is 1, February is 2 etc.")
-        b_month = input("Enter a number to make your selection here:")
-        b_month = int(b_month)
-
-        if validate_month_data(b_month):
+        try:
+            b_month = int(input("Enter a number to make your selection here:"))
+            #b_month = int(b_month)
+        except ValueError:
+            print(error)
+            continue    
+        if b_month in range(1,13):
+            chosen_month_data(b_month)
             break
+        else:
+            print(error)
 
 
           
 
-def validate_month_data(values):
+def chosen_month_data(values):
     """
-    Checks user choice input for a month is between 1 and 12 inclusive.
-    Raises an error if not correct input.
+    Prints month choice to terminal, and birthday lists
     """
     
     if int(values) == 1:
-        print("January")
+        print("January Birthdays are\n")
+        print()
         return True, "Jan"
     elif int(values) == 2:
         print("February") 
@@ -114,12 +125,21 @@ def validate_month_data(values):
         return True, "Nov" 
     elif int(values) == 12:
         print("December") 
-        return True, "Dec"                                    
+        return True, "Dec"  
+    """ 
+    not sure if I need this?                                     
     else:
-        print("You need to type between 1 and 12 to make choose a month.")
+        print("You need to type between 1 and 12 to  choose a month.")
         return False 
-        
+    """   
+
     print(values) 
+
+def get_birthday_list():
+        
+
+
+
 
 def add_birthday():
     print("add")         

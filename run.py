@@ -21,6 +21,7 @@ def first_user_choice():
     Welcome user and ask them to choose
     1- check for birthdays
     2- add a new birthday to the spreadsheet
+    print choice to terminal and alert if not correct input made.
     """
 
     print("Welcome to your Birthday Reminder App.")

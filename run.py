@@ -136,7 +136,7 @@ def chosen_month_data(values):
     print(values) 
 
 
-
+def 
 
 
 
@@ -145,6 +145,9 @@ def chosen_month_data(values):
    
        
 def main():
+    """
+    run all program functions
+    """
     first_user_choice() 
     #select_month() 
      

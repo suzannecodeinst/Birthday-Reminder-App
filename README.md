@@ -8,4 +8,5 @@ I set up the workarea and connected the Google sheets by following the API demo 
 
 Referred to [this article](https://www.knowledgehut.com/blog/programming/user-input-in-python) on user input.
 Referred to [this article](https://www.toolsqa.com/python/python-while-loop/) for checking the 'while' loop.
+Referred to [this article](https://stackoverflow.com/questions/20652527/python-try-except-with-of-if-else) on combination of with, of, if, else usage.
 Mentor guidance on organization of functions and how to simplify with range selectors and using while True statements to loop if errors are in the input.

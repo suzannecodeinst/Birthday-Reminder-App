@@ -67,9 +67,8 @@ def select_month(choice = 1):
     error = "You must enter a number between 1 and 12"
     print("Which month would you like?")
     print("All months are numbered 1 to 12, so January is 1, February is 2 etc.")
-    while True:
-        
-        
+    
+    while True:    
         try:
             b_month = int(input("Enter a number to make your selection here:"))
             #b_month = int(b_month)

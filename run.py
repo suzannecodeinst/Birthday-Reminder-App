@@ -23,12 +23,14 @@ def first_user_choice():
     2- add a new birthday to the spreadsheet
     print choice to terminal and alert if not correct input made.
     """
-    while True:
-        print("Welcome to your Birthday Reminder App.")
-        print("Please enter")
-        print("1 to check for birthdays, or")
-        print("2 to add a birthday to the spreadsheet.\n")
 
+    print("Welcome to your Birthday Reminder App.")
+    print("Please enter")
+    print("1 to check for birthdays, or")
+    print("2 to add a birthday to the spreadsheet.\n")
+
+
+    while True:
         choice = input("Enter '1' or '2' to make your selection here:")
         choice = int(choice)
     

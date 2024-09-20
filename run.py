@@ -3,6 +3,7 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import gspread
 from google.oauth2.service_account import Credentials
+from pprint import pprint
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -24,7 +25,7 @@ def first_user_choice():
     print choice to terminal and alert if not correct input made.
     """
 
-    print("Welcome to your Birthday Reminder App.\n")
+    
     print("Please enter")
     print("1 to check for birthdays, or")
     print("2 to add a birthday to the spreadsheet.\n")
@@ -136,19 +137,16 @@ def chosen_month_data(values):
     print(values) 
 
 
-def 
+#def get_birthday_data():
 
 
-
-
-        
-   
-       
 def main():
     """
     run all program functions
     """
     first_user_choice() 
     #select_month() 
-     
+
+
+print("Welcome to your Birthday Reminder App.\n")     
 main()     

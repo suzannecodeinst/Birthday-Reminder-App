@@ -24,7 +24,7 @@ def first_user_choice():
     print choice to terminal and alert if not correct input made.
     """
 
-    print("Welcome to your Birthday Reminder App.")
+    print("Welcome to your Birthday Reminder App.\n")
     print("Please enter")
     print("1 to check for birthdays, or")
     print("2 to add a birthday to the spreadsheet.\n")
@@ -45,15 +45,16 @@ def validate_data(values):
     """
     if int(values) == 1:
         print("Ok, let's check for birthdays...")
-        return True
+        return True, select_month()
     elif int(values) == 2:
         print("You chose to add a new birthday...") 
-        return True
+        return True, add_birthday() 
+        
     else:
         print("You need to type 1 or 2 to make a choice.")
         return False 
         
-    print(values)    
+    #print(values)    
 
 def select_month(choice = 1):
     """
@@ -67,7 +68,6 @@ def select_month(choice = 1):
         b_month = int(b_month)
 
         if validate_month_data(b_month):
-            print("you chose month..")
             break
 
 
@@ -78,49 +78,53 @@ def validate_month_data(values):
     Checks user choice input for a month is between 1 and 12 inclusive.
     Raises an error if not correct input.
     """
+    
     if int(values) == 1:
         print("January")
-        return True
+        return True, "Jan"
     elif int(values) == 2:
         print("February") 
-        return True
+        return True, "Feb"
     elif int(values) == 3:
         print("March") 
-        return True  
+        return True, "Mar"  
     elif int(values) == 4:
         print("April") 
-        return True 
+        return True, "April" 
     elif int(values) == 5:
         print("May") 
-        return True
+        return True, "May"
     elif int(values) == 6:
         print("June") 
-        return True
+        return True, "June"
     elif int(values) == 7:
         print("July") 
-        return True
+        return True, "July"
     elif int(values) == 8:
         print("August") 
-        return True
+        return True, "August"
     elif int(values) == 9:
         print("September") 
-        return True
+        return True, "Sept"
     elif int(values) == 10:
         print("October") 
-        return True
+        return True, "Oct"
     elif int(values) == 11:
         print("November") 
-        return True 
+        return True, "Nov" 
     elif int(values) == 12:
         print("December") 
-        return True                                    
+        return True, "Dec"                                    
     else:
         print("You need to type between 1 and 12 to make choose a month.")
         return False 
         
-    print(values)      
+    print(values) 
+
+def add_birthday():
+    print("add")         
    
        
 
 first_user_choice() 
-select_month()  
+#select_month()  

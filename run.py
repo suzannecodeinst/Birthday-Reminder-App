@@ -163,10 +163,9 @@ def get_birthday_data():
 
 def add_birthday(choice = 2):
     """
-    Enters a new birthday to google sheet
-    enter a date and a name, validate data
-    where col A a is date and col B is name on the sheet
-    print confirm birthday is added to terminal
+    Asks user for new birthday data
+    enter a date and a name, validates data
+    if ok, progress to function to update google sheet
     """
 
     while True:

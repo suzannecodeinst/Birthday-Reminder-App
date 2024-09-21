@@ -180,7 +180,7 @@ def add_birthday(choice = 2):
         if validate_new_birthday_data(birthday_data):
             break
 
-    #return data    
+    return birthday_data    
         
 
 
@@ -194,7 +194,7 @@ def validate_new_birthday_data(values):
     """  
     
     
-    if :
+    if  :
         raise ValueError(f"Hmm, this information is very long, is it correct?")
         return False
     else: 
@@ -205,7 +205,13 @@ def validate_new_birthday_data(values):
 
 
 def update_spreadsheet():
+    """
+    append a new row to the selected spreadsheet month with the birthdate and name
+    """
     print(f"updating {month_result}...\n")
+    worksheet_to_update = SHEET.worksheet(month_result)
+    worksheet_to_update.append_row()
+    print(f"new birthday added to {month_result}")
     
  
 

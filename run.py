@@ -99,7 +99,7 @@ def chosen_month_data(values):
         month_result = 'Dec'  
         return True  
     """ 
-    not sure if I need this?                                     
+    not sure if I need this? does the above last elif need to be else?                                     
     else:
         print("You need to type between 1 and 12 to  choose a month.")
         return False 
@@ -185,8 +185,6 @@ def add_birthday(choice = 2):
         
 
 
-           
-
 
 
 def validate_new_birthday_data(values):
@@ -197,7 +195,7 @@ def validate_new_birthday_data(values):
     """  
     try:
         [str(value) for value in values]
-        if len(values) > 16:
+        if len(values) > 15:
             raise ValueError(
                 f"Hmm, this information is very long, is it correct?"
             )

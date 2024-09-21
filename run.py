@@ -90,6 +90,7 @@ def chosen_month_data(values):
     Selects chosen month worksheet from the Google Doc
     and returns the correct sheet as a global variable to pass to 
     the next function
+    prints the chosen month to terminal
     """
     global month_result
     if int(values) == 1:
@@ -150,7 +151,7 @@ def chosen_month_data(values):
 
 def get_birthday_data():
     """
-    gets the previousley selected month from the worksheet and prints the
+    gets the previously selected month from the worksheet and prints the
     data to the terminal.
     need to print the data nicer...
     """

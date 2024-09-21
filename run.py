@@ -123,7 +123,7 @@ def chosen_month_data(values):
         return True
     elif int(values) == 8:
         print("August Birthdays are...")
-        month_result = 'August'  
+        month_result = 'Aug'  
         return True
     elif int(values) == 9:
         print("September Birthdays are...")
@@ -147,6 +147,7 @@ def chosen_month_data(values):
         print("You need to type between 1 and 12 to  choose a month.")
         return False 
     """   
+   
 
 
 def get_birthday_data():

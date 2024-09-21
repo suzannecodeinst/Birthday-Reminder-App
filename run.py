@@ -88,7 +88,8 @@ def select_month(choice = 1):
 def chosen_month_data(values):
     """
     Selects chosen month worksheet from the Google Doc
-    and returns the correct sheet
+    and returns the correct sheet as a global variable to pass to 
+    the next function
     """
     global month_result
     if int(values) == 1:
@@ -100,46 +101,59 @@ def chosen_month_data(values):
         month_result = 'Feb' 
         return True
     elif int(values) == 3:
-        print("March") 
-        return True, "Mar"  
+        print("March Birthdays are...")
+        month_result = 'March' 
+        return True  
     elif int(values) == 4:
-        print("April") 
-        return True, "April" 
+        print("April Birthdays are...")
+        month_result = 'April'  
+        return True 
     elif int(values) == 5:
-        print("May") 
-        return True, "May"
+        print("May Birthdays are...")
+        month_result = 'May'  
+        return True
     elif int(values) == 6:
-        print("June") 
-        return True, "June"
+        print("June Birthdays are...")
+        month_result = 'June'  
+        return True
     elif int(values) == 7:
-        print("July") 
-        return True, "July"
+        print("July Birthdays are...")
+        month_result = 'July'  
+        return True
     elif int(values) == 8:
-        print("August") 
-        return True, "August"
+        print("August Birthdays are...")
+        month_result = 'August'  
+        return True
     elif int(values) == 9:
-        print("September") 
-        return True, "Sept"
+        print("September Birthdays are...")
+        month_result = 'Sept'  
+        return True
     elif int(values) == 10:
-        print("October") 
-        return True, "Oct"
+        print("October Birthdays are...")
+        month_result = 'Oct'  
+        return True
     elif int(values) == 11:
-        print("November") 
-        return True, "Nov" 
+        print("November Birthdays are...")
+        month_result = 'Nov'  
+        return True 
     elif int(values) == 12:
-        print("December") 
-        return True, "Dec"  
+        print("December Birthdays are...")
+        month_result = 'Dec'  
+        return True  
     """ 
     not sure if I need this?                                     
     else:
         print("You need to type between 1 and 12 to  choose a month.")
         return False 
     """   
-    
-    #print(values) 
 
 
 def get_birthday_data():
+    """
+    gets the previousley selected month from the worksheet and prints the
+    data to the terminal.
+    need to print the data nicer...
+    """
     global month_result
     birthday = SHEET.worksheet(month_result)
     birthday_detail = birthday.get_all_values()

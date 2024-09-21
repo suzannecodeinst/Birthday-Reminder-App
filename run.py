@@ -170,7 +170,7 @@ def add_birthday(choice = 2):
 
     while True:
         print("Please enter the date of the birthday you would like to add, followed by the name.")
-        print("Data should be one date and a name, separated by commas.")
+        print("Data should be one date and a name, separated a comma.")
         print("Example: 21st, Garry\n")
 
         birthday_str = input("Enter your data here: ")
@@ -189,20 +189,19 @@ def add_birthday(choice = 2):
 def validate_new_birthday_data(values):
     """
     Validates the data entered for a new birthday is valid,
-    the first entry is a number and can have letters, should not be more than 5 characters long.
-    the second entry should be letters(isalpha), not more than 12 characters long.
+    the first entry-string- is a number and can have letters, should not be more than 5 characters long.
+    the second entry-string should be letters(isalpha), not more than 12 characters long.
     """  
-    try:
-        [str(value) for value in values]
-        if len(values) > 15:
-            raise ValueError(
-                f"Hmm, this information is very long, is it correct?"
-            )
-    except ValueError as e:
-        print(f"Invalid data: {e}, please try again.\n")
+    
+    
+    if :
+        raise ValueError(f"Hmm, this information is very long, is it correct?")
         return False
+    else: 
+        return True, update_spreadsheet()
+        
 
-    return True, update_spreadsheet()
+    
 
 
 def update_spreadsheet():

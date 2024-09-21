@@ -105,10 +105,10 @@ def chosen_month_data(values):
         
 """
 def validate_data(values):
-    """
+    
     Checks user choice input is either 1 or 2.
     Raises an error if not correct input.
-    """
+    
     if int(values) == 1:
         print(f"Ok, let's check for birthdays in {month_result}...")
         return True, get_birthday_data()
@@ -136,27 +136,57 @@ def get_birthday_data():
     print(birthday_detail)
 
 
-def add_birthday(choice = 2):
+def add_birthday():
     """
     Asks user for new birthday data
     enter a date and a name, validates data
     if ok, progress to function to update google sheet
     """
 
-    while True:
-        print("Please enter the date of the birthday you would like to add, followed by the name.")
-        print("Data should be one date and a name, separated a comma.")
-        print("Example: 21st, Garry\n")
-
-        birthday_str = input("Enter your data here: ")
-
-        birthday_data = birthday_str.split(",")
-
-        if validate_new_birthday_data(birthday_data):
+    error_date = "You must enter a number for the day of the month."
+    error_name = "You must enter a name."
+    print(f"Would you like to add a new  birthday to {month_result}?") 
+    #print("Day should be one number, eg, 1, 12 or 2.")
+    #print("Name should be Example: 21st, Garry\n")
+    while True:    
+        try:
+            b_date = int(input("Enter a number of the day of the month here:"))
+            #b_month = int(b_month)
+        except ValueError:
+            print(error_date)
+            continue    
+        if b_date in range(1,32):
+            #chosen_date_data(b_date)
             break
+        else:
+            print(error_date) 
 
-    return birthday_data()    
-        
+    while True:    
+        try:
+            b_name = str(input("Enter the name of your birthday person here:"))
+            #b_month = int(b_month)
+        except ValueError:
+            print(error_name)
+            continue 
+        if b_name.isalpha():
+            print("yay")
+            break
+        else:
+            print(error_name) 
+  
+    #new_birthday = b_date + b_name
+    #return new_birthday           
+      
+
+def update_worksheet():
+    """
+    Receives a list of integers to be inserted into a worksheet
+    Update the relevant worksheet with the data provided
+    """
+    global month_result
+    worksheet_to_update = SHEET.worksheet(month_result)
+    worksheet_to_update.append_row(['1', 'tim'])
+    print(f"{month_result} birthdays updated successfully\n")      
 
 
 def main():
@@ -166,10 +196,9 @@ def main():
 
     select_month() 
     #first_user_choice() 
-
     get_birthday_data()
-    #add_birhday()
-    #update_spreadsheet(new_birthday_data, month_result)
+    add_birthday()
+    update_worksheet()
     
 print("Welcome to your Birthday Reminder App.\n")     
 main()     

@@ -168,7 +168,6 @@ def add_birthday(choice = 2):
     where col A a is date and col B is name on the sheet
     print confirm birthday is added to terminal
     """
-    print("working")
 
     while True:
         print("Please enter the date of the birthday you would like to add, followed by the name.")

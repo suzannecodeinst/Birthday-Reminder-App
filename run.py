@@ -53,82 +53,57 @@ def chosen_month_data(values):
     if int(values) == 1:
         print("January")
         month_result = 'Jan'
-        return True
+        return month_result
     elif int(values) == 2:
         print("February")
         month_result = 'Feb' 
-        return True
+        return month_result
     elif int(values) == 3:
         print("March")
         month_result = 'March' 
-        return True  
+        return month_result  
     elif int(values) == 4:
         print("April")
         month_result = 'April'  
-        return True 
+        return month_result 
     elif int(values) == 5:
         print("May")
         month_result = 'May'  
-        return True
+        return month_result
     elif int(values) == 6:
         print("June")
         month_result = 'June'  
-        return True
+        return month_result
     elif int(values) == 7:
         print("July")
         month_result = 'July'  
-        return True
+        return month_result
     elif int(values) == 8:
         print("August")
         month_result = 'Aug'  
-        return True
+        return month_result
     elif int(values) == 9:
         print("September")
         month_result = 'Sept'  
-        return True
+        return month_result
     elif int(values) == 10:
         print("October")
         month_result = 'Oct'  
-        return True
+        return month_result
     elif int(values) == 11:
         print("November")
         month_result = 'Nov'  
-        return True 
+        return month_result 
     elif int(values) == 12:
         print("December")
         month_result = 'Dec'  
-        return True  
-    """ 
-    not sure if I need this? does the above last elif need to be else?                                     
+        return month_result                                        
     else:
         print("You need to type between 1 and 12 to  choose a month.")
         return False 
-    """   
-
-def first_user_choice():
-    """
-    Ask them to choose
-    1- check for birthdays
-    2- add a new birthday to the spreadsheet
-    print choice to terminal and alert if not correct input made.
-    """
-
-    
-    print("Please enter")
-    print("1 to check for birthdays, or")
-    print("2 to add a birthday to the spreadsheet.\n")
-
-
-    while True:
-        choice = input("Enter '1' or '2' to make your selection here:")
-        choice = int(choice)
-    
-        if validate_data(choice):
-            #print("works")
-            break
-
+      
         
-
+"""
 def validate_data(values):
     """
     Checks user choice input is either 1 or 2.
@@ -139,15 +114,14 @@ def validate_data(values):
         return True, get_birthday_data()
     elif int(values) == 2:
         print(f"You chose to add a new birthday to {month_result}") 
-        return True, add_birthday() 
-        
+        return True, add_birthday()     
     else:
         print("You need to type 1 or 2 to make a choice.")
-        return False 
+        return False
         
     #print(values) 
 
-
+"""
 
 def get_birthday_data():
     """
@@ -158,6 +132,7 @@ def get_birthday_data():
     global month_result
     birthday = SHEET.worksheet(month_result)
     birthday_detail = birthday.get_all_values()
+    print(f"All birthdays in {month_result} are ...")
     print(birthday_detail)
 
 
@@ -180,41 +155,8 @@ def add_birthday(choice = 2):
         if validate_new_birthday_data(birthday_data):
             break
 
-    return birthday_data    
+    return birthday_data()    
         
-
-
-
-
-def validate_new_birthday_data(values):
-    """
-    Validates the data entered for a new birthday is valid,
-    the first entry-string- is a number and can have letters, should not be more than 5 characters long.
-    the second entry-string should be letters(isalpha), not more than 12 characters long.
-    """  
-    
-    
-    if  :
-        raise ValueError(f"Hmm, this information is very long, is it correct?")
-        return False
-    else: 
-        return True, update_spreadsheet()
-        
-
-    
-
-
-def update_spreadsheet():
-    """
-    append a new row to the selected spreadsheet month with the birthdate and name
-    """
-    print(f"updating {month_result}...\n")
-    worksheet_to_update = SHEET.worksheet(month_result)
-    worksheet_to_update.append_row()
-    print(f"new birthday added to {month_result}")
-    
- 
-
 
 
 def main():
@@ -223,8 +165,9 @@ def main():
     """
 
     select_month() 
-    first_user_choice() 
-    #get_birthday_data()
+    #first_user_choice() 
+
+    get_birthday_data()
     #add_birhday()
     #update_spreadsheet(new_birthday_data, month_result)
     

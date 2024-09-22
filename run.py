@@ -109,6 +109,7 @@ def get_birthday_data():
     """
     gets the previously selected month from the worksheet and prints the
     data to the terminal.
+    Code copied from Love Sandwiches
     """
     global month_result
     birthday = SHEET.worksheet(month_result)
@@ -158,7 +159,7 @@ def update_worksheet(data, worksheet):
     """
     Receives a list of integers to be inserted into a worksheet
     Update the relevant worksheet with the data provided
-    copied from the love sandwiches project
+    Code copied from the love sandwiches project
     """
     
     print(f"Updating {worksheet} worksheet...\n")

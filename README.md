@@ -59,7 +59,7 @@ Referred to [this article](https://www.knowledgehut.com/blog/programming/user-in
 Referred to [this article](https://www.toolsqa.com/python/python-while-loop/) for checking the 'while' loop.<br>
 Referred to [this article](https://stackoverflow.com/questions/20652527/python-try-except-with-of-if-else) on combination of with, of, if, else usage.<br>
 Referred to [this article](https://www.geeksforgeeks.org/how-to-use-a-variable-from-another-function-in-python/) for advice on global variables.<br>
-Code for restarting and exiting the game copied from [here](9https://gist.github.com/ArielAleksandrus/9dd5da003162e7f177c3).<br>
+Code for restarting and exiting the game copied from [here](https://gist.github.com/ArielAleksandrus/9dd5da003162e7f177c3).<br>
 Mentor guidance on organization of functions and how to simplify with range selectors and using while True statements to loop if errors are in the input.<br>
 Mentor guidance on simplifying flow structure of app when referring to initial flowcharts, comparing functions, seeing what is repeated etc.<br>
 

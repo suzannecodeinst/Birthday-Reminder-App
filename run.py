@@ -102,7 +102,7 @@ def chosen_month_data(values):
 
 def get_birthday_data():
     """Get the previously selected month from the worksheet.
-    
+
     Prints the data to the terminal.
     Code copied from Love Sandwiches.
     """
@@ -132,7 +132,7 @@ def add_birthday_date():
 
 def validate_new_birthday_data(str):
     """Check there are two strings in the input.
-    
+
     return false if only one or more than 2.
     """
     if len(str) < 2:
@@ -147,7 +147,7 @@ def validate_new_birthday_data(str):
 
 def update_worksheet(data, worksheet):
     """Receive a list of integers to be inserted into worksheet.
-    
+
     Update the relevant worksheet with the data provided.
     Code copied from the love sandwiches project.
     """
@@ -172,5 +172,5 @@ def main():
         main()
 
 
-print("Welcome to your Birthday Reminder App.\n")     
-main()     
+print("Welcome to your Birthday Reminder App.\n")
+main()

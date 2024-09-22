@@ -41,7 +41,7 @@ The user can add birthdays to their selected month and update the google sheet.
 
 ## Testing
 I have manually tested the following;
-- Passed the code through Pep8, there were warnings for white space, and various input statemenst and print statements that were too long for the app terminal window, I adjusted these accordingly.
+- Passed the code through Pep8, there were warnings for white space, and various input statements and print statements that were too long for the app terminal window, I adjusted these accordingly, then Code passed validation
 - Tested inputs, so where a number is required for the month, I tested what would happen if a larger number was input, a letter or nothing at all.
 - Tested the input of two strings, so tried inputing nothing, and more than one string.
 - Tested in my local terminal and the Code Institute Heroku Terminal.

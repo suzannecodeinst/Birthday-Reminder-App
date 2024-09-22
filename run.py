@@ -101,32 +101,12 @@ def chosen_month_data(values):
         print("You need to type between 1 and 12 to  choose a month.")
         return False 
       
-        
-"""
-def validate_data(values):
-    
-    Checks user choice input is either 1 or 2.
-    Raises an error if not correct input.
-    
-    if int(values) == 1:
-        print(f"Ok, let's check for birthdays in {month_result}...")
-        return True, get_birthday_data()
-    elif int(values) == 2:
-        print(f"You chose to add a new birthday to {month_result}") 
-        return True, add_birthday()     
-    else:
-        print("You need to type 1 or 2 to make a choice.")
-        return False
-        
-    #print(values) 
 
-"""
 
 def get_birthday_data():
     """
     gets the previously selected month from the worksheet and prints the
     data to the terminal.
-    need to print the data nicer...
     """
     global month_result
     birthday = SHEET.worksheet(month_result)
@@ -138,15 +118,10 @@ def get_birthday_data():
 def add_birthday_date():
     """
     Asks user for new birthday data
-    enter a date, validates data
-    if ok, progress to name input
+    enter a date and a name, validates data
     """
-    #global b_date
-    #error_date = "You must enter a number and a name."
-    #print(f"Would you like to add a new  birthday to {month_result}?")
-    #print("Please enter the date of the birthday you would like to add, followed by the name.")
     print(f"Would you like to add a new  birthday to {month_result}?")
-    print("Data should be one date and a name, separated a comma.")
+    print("Please enter one date and a name, separated a comma.")
     print("Example: 21st, Garry\n")
          
     while True:    
@@ -183,9 +158,9 @@ def update_worksheet(data, worksheet):
     """
     Receives a list of integers to be inserted into a worksheet
     Update the relevant worksheet with the data provided
+    copied from the love sandwiches project
     """
     
-
     print(f"Updating {worksheet} worksheet...\n")
     worksheet_to_update = SHEET.worksheet(worksheet)
     worksheet_to_update.append_row(data)
@@ -199,11 +174,8 @@ def main():
 
     select_month()  
     get_birthday_data()
-    #add_birthday_date()
     new_birthday = add_birthday_date()
     update_worksheet(new_birthday, month_result)
-    #birthday_result = []    
-    #birthday_result.append([add_birthday_date, add_birthday_name]) 
     
     
 print("Welcome to your Birthday Reminder App.\n")     

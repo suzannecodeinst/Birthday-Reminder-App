@@ -16,9 +16,9 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('birthday_spreadsheet') 
 
-   
 
 def select_month():
+
     """
     Asks the user to choose a month
     asks for an input of a number from 1 to 12
@@ -26,15 +26,16 @@ def select_month():
     """
     error = "You must enter a number between 1 and 12"
     print("Choose a month to get started")
-    print("All months are numbered 1 to 12, so January is 1, February is 2 etc.")
+    print("All months are numbered 1 to 12,")
+    print("so January is 1, February is 2 etc.")
     
     while True:    
         try:
-            b_month = int(input("Enter a number to make your selection here:\n"))
+            b_month = int(input("Enter a number here:\n"))
         except ValueError:
             print(error)
             continue    
-        if b_month in range(1,13):
+        if b_month in range(1, 13):
             chosen_month_data(b_month)
             break
         else:
@@ -42,6 +43,7 @@ def select_month():
           
 
 def chosen_month_data(values):
+
     """
     Selects chosen month worksheet from the Google Doc
     and returns the correct sheet as a global variable to pass to 
@@ -102,8 +104,8 @@ def chosen_month_data(values):
         return False 
       
 
-
 def get_birthday_data():
+
     """
     gets the previously selected month from the worksheet and prints the
     data to the terminal.
@@ -116,6 +118,7 @@ def get_birthday_data():
 
 
 def add_birthday_date():
+
     """
     Asks user for new birthday data
     enter a date and a name, validates data
@@ -130,9 +133,9 @@ def add_birthday_date():
         birthday_data = b_date.split(",")
 
         if validate_new_birthday_data(birthday_data):
-            break
-        
+            break        
     return birthday_data
+
 
 def validate_new_birthday_data(str):
 
@@ -150,11 +153,8 @@ def validate_new_birthday_data(str):
         return True      
     
 
-    
-    
-                   
-
 def update_worksheet(data, worksheet):
+
     """
     Receives a list of integers to be inserted into a worksheet
     Update the relevant worksheet with the data provided
@@ -168,24 +168,21 @@ def update_worksheet(data, worksheet):
 
 
 def main():
+
     """
     run all program functions
-    """
-    
-        
+    """        
     select_month()  
     get_birthday_data()
     new_birthday = add_birthday_date()
     update_worksheet(new_birthday, month_result)
-
-    userInput = input("Enter 'r' to restart and check another month or 'x' to exit:\n")
-
+    userInput = input("Enter 'm' to check another month or 'x' to exit:\n")
     if userInput == "x":
         print('Goodbye.')
         sys.exit() 
     else:
         main()  
     
-    
+   
 print("Welcome to your Birthday Reminder App.\n")     
 main()     

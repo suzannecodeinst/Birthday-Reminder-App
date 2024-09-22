@@ -4,6 +4,10 @@ The Birthday reminder app runs in the Code Institute mock terminal on Heroku.
 
 The app allows the user to access a birthday spreadsheet they have set up in their Google account. They can use the app to check for birthdays that are due in a specific selected month, and also to update the spreadsheet by adding birthdays to a selected month.
 
+[Here is the app](https://birthday-reminder-620bb10397e2.herokuapp.com/)
+![Screenshot of the Birthday Reminder App](/assets/birthdayappscreen.png)
+
+
 ## How to use the app
 
 The User is welcomed to the App.<br>
@@ -15,6 +19,20 @@ The user is prompted to enter a date and a name, separated by a comma, eg: 21st,
 If they don't follow this pattern, (two strings separated by a comma) they are asked to try again.<br>
 If they input correctly the spreadsheet for their chosen month is updated and this is confirmed to them.<br>
 They are asked if they would like to restart and check another month or exit, if they want to restart they are taken back to choosing a month, or if they want to exit the app finishes with a 'Goodbye'.
+
+## Features
+### Existing Features
+The user is presented with an input to select a month.
+The user can call data from the google spreadsheet of their lists of birthdays form the selected month.
+The user can add birthdays to their selected month and update the google sheet.
+- Input Validation and error checking
+    - You can only enter a number between 1 and 12 to choose a month.
+    - You can only enter two strings separated by a comma for the date and name input for a new birthday to be added.
+The user can exit the app or choose another month to access.    
+### Future features
+- Allow the user to exit the app after they have selected the month and checked for birthdays, currently they are asked if they would like to add a birthday but have no option to leave if they do not want to.
+- Improve the presentation of the data pulled from the google sheet when you check what birthdays there are, I would like to take away all the brackets, so it reads more cleanly as a list of dates with names.
+- Improve the validation checks for the input for the new birthday date and name. Currently it just checks the input is two strings, I would like the first string to be confirmed as a date number that could only occur in the already selected month. And the second string to be confirmed as a name that does not exceed a certain length of characters.
 
 ## Credits/Reference
 

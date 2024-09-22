@@ -4,6 +4,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 from pprint import pprint
+import sys
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -171,11 +172,20 @@ def main():
     """
     run all program functions
     """
-
+    
+        
     select_month()  
     get_birthday_data()
     new_birthday = add_birthday_date()
     update_worksheet(new_birthday, month_result)
+
+    userInput = input("Enter 'r' to restart or 'x' to exit:")
+
+    if userInput == "x":
+        print('Goodbye.')
+        sys.exit() # exits the program
+    else:
+        main()  
     
     
 print("Welcome to your Birthday Reminder App.\n")     

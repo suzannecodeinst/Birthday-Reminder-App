@@ -3,7 +3,6 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import gspread
 from google.oauth2.service_account import Credentials
-from pprint import pprint
 import sys
 
 SCOPE = [
@@ -31,7 +30,7 @@ def select_month():
     
     while True:    
         try:
-            b_month = int(input("Enter a number to make your selection here:"))
+            b_month = int(input("Enter a number to make your selection here:\n"))
         except ValueError:
             print(error)
             continue    
@@ -127,7 +126,7 @@ def add_birthday_date():
          
     while True:    
         
-        b_date = input("Enter a number and a name here:")
+        b_date = input("Enter a number and a name here:\n")
         birthday_data = b_date.split(",")
 
         if validate_new_birthday_data(birthday_data):
@@ -179,11 +178,11 @@ def main():
     new_birthday = add_birthday_date()
     update_worksheet(new_birthday, month_result)
 
-    userInput = input("Enter 'r' to restart or 'x' to exit:")
+    userInput = input("Enter 'r' to restart and check another month or 'x' to exit:\n")
 
     if userInput == "x":
         print('Goodbye.')
-        sys.exit() # exits the program
+        sys.exit() 
     else:
         main()  
     

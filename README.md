@@ -68,7 +68,7 @@ This project was deployed using Code Institute's mock terminal for Heroku.
 The live project is [here](https://birthday-reminder-620bb10397e2.herokuapp.com/)
 
 - Steps for deployment
-    - Fork or clomne this repository
+    - Fork or clone this repository
     - Create a new Heroku app
     - Set the buildbacks to Python and NodeJS in that order
     - Link the Heroku app to the repository

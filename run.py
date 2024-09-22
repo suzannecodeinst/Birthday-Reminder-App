@@ -120,7 +120,7 @@ def add_birthday_date():
     Validate data.
     """
     print(f"Would you like to add a new  birthday to {month_result}?")
-    print("Please enter one date and a name, separated a comma.")
+    print("Please enter a date and a name, separated by a comma.")
     print("Example: 21st, Garry\n")
     while True:
         b_date = input("Enter a number and a name here:\n")
